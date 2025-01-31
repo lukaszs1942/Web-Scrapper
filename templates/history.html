@@ -3,15 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scraped Data</title>
+    <title>Scraped Data History</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
-    <h1>Scraped Data</h1>
-    <form action="/scrape" method="post">
-        <input type="text" name="url" placeholder="Enter URL to scrape" required>
-        <button type="submit">Scrape</button>
-    </form>
+    <h1>Scraped Data History</h1>
     <ul>
         {% for item in data %}
             <li>
@@ -22,6 +18,6 @@
             </li>
         {% endfor %}
     </ul>
-    <a href="{{ url_for('history') }}">View History</a>
+    <a href="{{ url_for('index') }}">Back to Home</a>
 </body>
 </html>
